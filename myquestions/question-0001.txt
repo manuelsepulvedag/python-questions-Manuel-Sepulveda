@@ -1,0 +1,20 @@
+Reconstrucción de Atractores con Lag-Embeddings
+Contexto: En series temporales caóticas (clima, bolsa), un solo sensor
+no revela la dinámica completa. El Teorema de Takens permite reconstruir
+el espacio de fases usando retardos (lags).
+
+Misión: Escribe reconstruir_atractor(serie, dimension, retardo) que:
+
+Use NumPy para crear una matriz de diseño donde cada fila es un vector
+de la serie original con sus versiones retrasadas.
+
+Calcule la matriz de covarianza de esta reconstrucción.
+
+Use PCA de Sklearn para reducir la matriz a 3 componentes principales.
+
+Devuelva un Pandas DataFrame con las 3 componentes y el "ratio de varianza 
+explicada" acumulado.
+
+Input: serie (pd.Series), dimension (int), retardo (int).
+
+Output: tuple (pd.DataFrame, float).

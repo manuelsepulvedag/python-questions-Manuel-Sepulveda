@@ -1,0 +1,20 @@
+Optimización del Umbral de Decisión vía Cost-Benefit Matrix
+Contexto: En detección de fraudes, un Falso Negativo cuesta mucho más 
+que un Falso Positivo. El umbral de 0.5 de Sklearn no es óptimo.
+
+Misión: Escribe optimizar_umbral_costo(y_true, y_probs, costo_fn, costo_fp) 
+que:
+
+Itere sobre 100 umbrales posibles (de 0 a 1) usando NumPy (linspace).
+
+Para cada umbral, calcule la matriz de confusión.
+
+Calcule el costo total: $Costo = (FN \times costo\_fn) + (FP \times costo\_fp)$.
+
+Identifique el umbral que minimiza el costo.
+Devuelva un diccionario con el umbral óptimo y el costo mínimo.
+
+Input: y_true (np.array), y_probs (np.array de probabilidades), 
+costo_fn (float), costo_fp (float).
+
+Output: dict.

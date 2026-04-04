@@ -1,0 +1,21 @@
+Pregunta C — Filtrado de Ruido en Señales con Media Móvil Exponencial (EMA)
+Adaptativa
+
+Contexto: Los sensores industriales suelen tener picos de ruido. 
+Un filtro estático pierde eventos rápidos; uno adaptativo ajusta su 
+suavizado según la varianza reciente.
+
+Misión: Escribe filtro_ema_adaptativo(df, valor_col, ventana_volatilidad=20)
+que:
+
+Calcule con Pandas la desviación estándar móvil (volatilidad) de la columna.
+
+Use NumPy para calcular un factor de suavizado $\alpha$ dinámico para cada 
+punto: $\alpha_i = \text{volatilidad}_i / \max(\text{volatilidad})$.
+
+Aplique la fórmula EMA: $S_i = \alpha_i \cdot X_i + (1 - \alpha_i) \cdot S_{i-1}$.
+
+Devuelva el DataFrame original con la nueva columna señal_limpia.
+
+Input: df (pd.DataFrame), valor_col (str), ventana_volatilidad (int).
+Output: pd.DataFrame.

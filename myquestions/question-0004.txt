@@ -1,0 +1,17 @@
+Evaluación de Estabilidad de Clusters mediante Bootstrapping
+Contexto: Los algoritmos como K-Means siempre devuelven clusters, incluso en 
+datos aleatorios. La estabilidad mide qué tan reales son esos grupos.
+Misión: Escribe evaluar_estabilidad_clusters(X, n_clusters, n_bootstrap=10) que:
+
+Genere n_bootstrap submuestras aleatorias de X con reemplazo usando NumPy.
+
+Ajuste un KMeans de Sklearn en cada submuestra.
+
+Para cada par de ejecuciones, calcule el Adjusted Rand Index (ARI) usando sklearn.metrics.
+
+Devuelva la media y desviación estándar del ARI (un valor cercano a 1 
+indica clusters muy estables).
+
+Input: X (np.ndarray), n_clusters (int), n_bootstrap (int).
+
+Output: tuple (float media, float std)."
